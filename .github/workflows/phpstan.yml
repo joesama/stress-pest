@@ -1,0 +1,24 @@
+name: PHPStan
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  phpstan:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@master
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest --no-dev
+
+    - name: PHPStan
+      uses: docker://oskarstark/phpstan-ga
+      with:
+        args: analyse src/
