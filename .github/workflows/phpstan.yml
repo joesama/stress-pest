@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest --no-dev
+      run: composer install --prefer-dist --no-progress --no-suggest
 
     - name: PHPStan
       uses: docker://oskarstark/phpstan-ga
