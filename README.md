@@ -80,6 +80,13 @@ beforeEach(function () {
 
 ```
 
+In the test file add the generate report function ass the last test
+
+```
+it('generate report', function () {
+    $this->generatePdfReport();
+});
+```
 
 # License
 
