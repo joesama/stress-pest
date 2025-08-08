@@ -19,11 +19,11 @@
     "barryvdh/laravel-snappy": "^1.0",
     "illuminate/database": "v10|v11|v12",
     "illuminate/config": "v10|v11|v12",
-    "illuminate/support": "v10|v11|v12"
+    "illuminate/support": "v10|v11|v12",
+    "pestphp/pest": "^2.36",
+    "pestphp/pest-plugin-stressless": "^2.2"
   },
   "require-dev": {
-    "pestphp/pest": "^2.36",
-    "pestphp/pest-plugin-stressless": "^2.2",
     "pheromone/phpcs-security-audit": "^2.0",
     "phpstan/phpstan": "^2.1"
   },
