@@ -16,6 +16,7 @@
   },
   "require": {
     "php": "^8.2",
+    "ext-zip": "*",
     "barryvdh/laravel-snappy": "^1.0",
     "illuminate/database": "v10|v11|v12",
     "illuminate/config": "v10|v11|v12",
