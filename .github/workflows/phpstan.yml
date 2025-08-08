@@ -20,11 +20,16 @@ jobs:
       with:
         php-version: '8.2' # Specify your desired PHP version
         extensions: pdo_mysql, gd, imagick, zip # List the extensions to install, separated by commas
+    - run: |
+        composer global config --no-plugins allow-plugins.phpstan/extension-installer true
 
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
+    - name: Update project dependencies
+      uses: ramsey/composer-install@v1
 
     - name: PHPStan
       uses: docker://oskarstark/phpstan-ga
+      env:
+        CHECK_PLATFORM_REQUIREMENTS: false
+        REQUIRE_DEV: true
       with:
         args: analyse plugins/
