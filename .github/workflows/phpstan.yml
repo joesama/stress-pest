@@ -13,7 +13,13 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v4
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2' # Specify your desired PHP version
+        extensions: pdo_mysql, gd, imagick, zip # List the extensions to install, separated by commas
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
