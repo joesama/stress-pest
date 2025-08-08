@@ -1,0 +1,33 @@
+{
+  "name": "joesama/stress-pest",
+  "description": "Pest Stress Plugin",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "ahmed johari jumali",
+      "email": "joharijumali@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Joesama\\StressPest\\": "plugins/"
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "barryvdh/laravel-snappy": "^1.0",
+    "illuminate/database": "v10|v11|v12",
+    "illuminate/config": "v10|v11|v12",
+    "illuminate/support": "v10|v11|v12"
+  },
+  "require-dev": {
+    "pestphp/pest": "^2.36",
+    "pestphp/pest-plugin-stressless": "^2.2"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
